@@ -47,7 +47,7 @@
         enabled: yes
         state: started
       become: yes
- - name: Start Application
+    - name: Start Application
       shell: |
         cd "{{ app_directory }}"
         python application.py
