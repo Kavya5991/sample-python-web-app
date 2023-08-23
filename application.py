@@ -16,6 +16,9 @@
 import os
 import sys
 import json
+import sys
+print("Python Path:", sys.executable)
+
 
 import flask
 from flask import request, Response
