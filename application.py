@@ -16,8 +16,7 @@
 import os
 import sys
 import json
-import sys
-print("Python Path:", sys.executable)
+
 
 
 import flask
