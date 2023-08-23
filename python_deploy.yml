@@ -8,10 +8,7 @@
     app_directory: /home/ec2-user/app
 
   tasks:
-    - name: Clone Git Repository
-      git:
-        repo: "{{ app_repo }}"
-        dest: "{{ app_directory }}"
+   
 
     - name: Start Application
       shell: |
