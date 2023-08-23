@@ -37,6 +37,7 @@
         - boto
         - boto3
         - botocore
+        - Flask
     - name: Start Nginx service
       systemd:
         name: nginx
