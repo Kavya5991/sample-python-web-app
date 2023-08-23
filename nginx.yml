@@ -1,7 +1,10 @@
 ---
 - name: Install required softwares on Amazon Linux
   hosts: localhost
-  become: yes             
+  become: yes   
+  vars:
+    app_directory: /home/ec2-user/app
+
   tasks:
     - name: Update package cache
       ansible.builtin.yum:
@@ -44,3 +47,11 @@
         enabled: yes
         state: started
       become: yes
+ - name: Start Application
+      shell: |
+        cd "{{ app_directory }}"
+        python application.py
+      args:
+        executable: /bin/bash
+      become: yes
+      become_user: ec2-user
